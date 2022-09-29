@@ -1,29 +1,27 @@
-import { createContext, useState } from "react";
-import fotos from '../data/fotos.json'
+import { createContext, useEffect, useState } from "react";
+import.meta.env.VITE_PEXELX
 export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [data, setData] = useState([]);
 
-  const APIKEY = "563492ad6f917000010000011dec5a491d6940fdbaabae66f4986fd6";
-  const ENDPOINT = "https://api.pexels.com/v1/search?query=people";
-
-
   const getData = async () => {
-    const response = await fetch("https://api.pexels.com/v1/search?query=people",
+    const response = await fetch(import.meta.env.VITE_ENDPOINT,
     {method: "GET",
       headers: {
-        Authorization:
-          "563492ad6f917000010000011dec5a491d6940fdbaabae66f4986fd6",
+        Authorization:import.meta.env.VITE_PEXELX,
       },
     })
     const data = await response.json()
     console.log(data.photos)
-
+   
   };
 
-  getData()
-
+  
+  useEffect(() => {
+    
+    getData()
+}, [])
 
 
 
