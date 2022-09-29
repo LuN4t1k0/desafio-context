@@ -7,7 +7,7 @@ import React from 'react'
 const AppProvider = ({children}) => {
   const [data, setData] = useState("Cristian")
   return (
-    <AppContext.Provider value={{}}>
+    <AppContext.Provider value={{data, setData}}>
       {children}
     </AppContext.Provider>
   )
