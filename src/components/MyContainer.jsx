@@ -1,11 +1,9 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../context/AppContext'
+import MyCard from "./MyCard";
 
 const MyContainer = () => {
-  const {data} = useContext(AppContext)
-  return (
-    <div><h1>{data}</h1></div>
-  )
-}
+  return <div>
+    <MyCard></MyCard>
+  </div>;
+};
 
-export default MyContainer
+export default MyContainer;
