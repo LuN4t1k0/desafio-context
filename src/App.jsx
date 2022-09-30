@@ -1,14 +1,15 @@
 
 import "../src/assets/css/styles.css";
-import Gallery from "./components/Gallery";
+
 import AppProvider from "./context/AppContext";
+import Home from "./pages/Home";
 
 function App() {
 
 
   return (
     <AppProvider>
-      <Gallery/>
+     <Home/>
     </AppProvider>
   );
 }

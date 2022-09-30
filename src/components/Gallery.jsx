@@ -1,10 +1,6 @@
-import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
 import MyImg from "./MyImg";
 
-const MyContainer = () => {
-  const { data } = useContext(AppContext);
-
+const MyContainer = ({ data }) => {
   return (
     <div className="gallery">
       {data.map((x) => (
