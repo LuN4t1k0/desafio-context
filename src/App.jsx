@@ -1,5 +1,5 @@
 
-import "../src/assets/css/App.css";
+import "../src/assets/css/styles.css";
 import MyContainer from "./components/MyContainer";
 import AppProvider from "./context/AppContext";
 
