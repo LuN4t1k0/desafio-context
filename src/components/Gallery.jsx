@@ -2,23 +2,18 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 
-
 const MyContainer = () => {
   const { data } = useContext(AppContext);
-  const url = "https://images.pexels.com/photos/889545/pexels-photo-889545.jpeg"
 
-  return (
-    <div className="img-container">
-
-
-
-      
-    </div>
-  );
+  return <div>
+    <h1>gallery</h1>
+  </div>;
 };
 
 export default MyContainer;
 
-{/* {data.map((item) => (
+{
+  /* {data.map((item) => (
   <img src={item.src.original} alt="" />
-))} */}
+))} */
+}

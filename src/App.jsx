@@ -1,6 +1,6 @@
 
 import "../src/assets/css/styles.css";
-import MyContainer from "./components/MyContainer";
+import Gallery from "./components/Gallery";
 import AppProvider from "./context/AppContext";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <AppProvider>
-      <MyContainer/>
+      <Gallery/>
     </AppProvider>
   );
 }
