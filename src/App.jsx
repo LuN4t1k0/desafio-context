@@ -1,4 +1,5 @@
 
+import { BrowserRouter } from "react-router-dom";
 import "../src/assets/css/styles.css";
 import MyNavBar from "./components/MyNavBar";
 
@@ -9,10 +10,12 @@ function App() {
 
 
   return (
+    <BrowserRouter>
     <AppProvider>
       <MyNavBar/>
      <Home/>
     </AppProvider>
+    </BrowserRouter>
   );
 }
 
