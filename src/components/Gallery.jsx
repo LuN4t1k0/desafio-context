@@ -6,9 +6,9 @@ const MyContainer = () => {
   const { data } = useContext(AppContext);
 
   return (
-    <div className="galeria">
+    <div className="gallery">
       {data.map((x) => (
-        <MyImg  key={x.id} nombre={x.photographer} url={x.src.original} alt={x.alt}/>
+        <MyImg key={x.id} like={x.liked} url={x.src.portrait} alt={x.alt} />
       ))}
     </div>
   );
