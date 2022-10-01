@@ -1,19 +1,15 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../context/AppContext'
+import React, { useContext } from "react";
+import MyContainer from "../components/Gallery";
+import { AppContext } from "../context/AppContext";
 
 const Favorites = () => {
-  const {data} = useContext(AppContext)
-
-  const dataFiltrada = data.filter(item => item.liked ===true)
+  const { data } = useContext(AppContext);
 
   return (
     <div className="p-2">
-    
-    {dataFiltrada.map(item => <p key={item.id}>{item.id} </p> )}
+      <MyContainer data={data.filter((item) => item.liked === true)} />
+    </div>
+  );
+};
 
-    
-  </div>
-  )
-}
-
-export default Favorites
+export default Favorites;
