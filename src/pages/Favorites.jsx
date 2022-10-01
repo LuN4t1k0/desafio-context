@@ -7,7 +7,8 @@ const Favorites = () => {
 
   return (
     <div className="p-2">
-      <MyContainer data={data.filter((item) => item.liked === true)} />
+      {data.filter((item) => item.liked === true) != 0 ? <MyContainer data={data.filter((item) => item.liked === true)} /> : <h1 className="">Debes seleccionar alguna foto</h1> }
+      
     </div>
   );
 };
