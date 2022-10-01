@@ -6,6 +6,7 @@ import MyNavBar from "./components/MyNavBar";
 import AppProvider from "./context/AppContext";
 import Home from "./pages/Home";
 import Favorites from './pages/Favorites'
+import NotFound from "./pages/NotFound";
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/favoritos" element={ <Favorites/> }/>
-      <Route path="*" element={ <h1>:( Pagina no encontrada</h1> }/>
+      <Route path="*" element={ <NotFound/> }/>
     </Routes>
     
     </AppProvider>
