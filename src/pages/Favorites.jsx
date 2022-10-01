@@ -8,7 +8,7 @@ const Favorites = () => {
 
   return (
     <div className="p-2">
-    {/* <MyContainer data = {dataFiltrada}/> */}
+    
     {dataFiltrada.map(item => <p key={item.id}>{item.id} </p> )}
 
     

@@ -3,14 +3,9 @@ import { AppContext } from "../context/AppContext";
 
 const MyImg = ({ url, alt, like,id, }) => {
 
-  const {data, setData, } = useContext(AppContext)
+  const { LikeOrNot } = useContext(AppContext)
 
-  const LikeOrNot = (id) => {
-    const index = data.findIndex(item => item.id === id);
-    data[index].liked = !data[index].liked
-    setData([...data])
-    console.log(data)
-  }
+
 
 
   return (

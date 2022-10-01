@@ -3,7 +3,7 @@ export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [data, setData] = useState([]);
-  // const [favoritos, setFavoritos] = useState([])
+ 
 
   const getData = async () => {
     const response = await fetch(import.meta.env.VITE_ENDPOINT, {
@@ -22,15 +22,15 @@ const AppProvider = ({ children }) => {
     getData();
   }, []);
 
-  // const LikeOrNot = (id) => {
-  //   const index = data.findIndex(item => item.id === id);
-  //   data[index].liked = !data[index].liked
-  //   setFavoritos([...data])
-  //   console.log(favoritos)
-  // }
+  const LikeOrNot = (id) => {
+    const index = data.findIndex(item => item.id === id);
+    data[index].liked = !data[index].liked
+    setData([...data])
+    console.log(data)
+  }
 
   return (
-    <AppContext.Provider value={{ data, setData  }}>
+    <AppContext.Provider value={{ data, setData, LikeOrNot  }}>
       {children}
     </AppContext.Provider>
   );
